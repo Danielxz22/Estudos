@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de Textos</title>
+    <style>
+        mark {
+            background-color: red;
+        }
+    </style>
+    <!--mudando a cor de todos os mark dentro dessa pagina para vermelho-->
+</head>
+<body>
+    <h1>Principais Formatações</h1>
+    <h2>Negrito / Destaque</h2>
+    <!--Existem 2 maneiras de se colocar negrito, uma nao semantica e uma semantica-->
+    <!--a n semantica é simplesmente pela forma-->
+    <p>Nesta frase temos um <b>termo em negrito</b> usando a tag b (não semântica)</p>
+    <!--além da forma o STRONG dá o sentido e destaque-->
+    <P>Nesta frase, tenho um <strong>termo em destaque</strong> usando a tag STRONG (semântica).</P>
+
+    <h2>Itálico / Ênfase</h2>
+    <!--novamente, esse é apenas uma forma em italico pois pro html ele n tem nenhuma semantica-->
+    <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag I (não semântica).</p>
+    <!--já para esse é diferente pois pro html a tag EM é semantica, ela tem significado-->
+    <p>Nesta frase, temos um <em>termo em ênfase</em> usando a tag EM (semântica).</p>
+
+    <h2>Texto marcado</h2>
+    <!--É pouco usual o mark, se quiser trocar a cor da marcaçao de amarelo pra qualquer outra, terá de utilizar parametros das CSS
+    no caso o <mark style="background-color:lime;">, adicionando esse parametro dentro de apenas 1 mark mudaria a cor padrao apenas dele mesmo, se quisesse trocar de todos os mark dentro de uma pagina teria q ir no cabeçalho e criar uma tag style pra ele -->
+    <p>Podemos criar também <mark>um texto marcado</mark> usando a tag MARK.</p>
+    <p>E no outro parágrafo, temos <mark>outro texto marcado</mark> no final.</p>
+
+    <h2>Texto grande e pequeno</h2>
+    <!--tag obsoleta portanto evitar, small talvez n seja por causa das famosas "letras pequenas" de contratos?-->
+    <p>Estamos criando um <big>texto grande</big> e um <small>texto pequeno</small> nesse parágrafo.</p>
+
+    <h2>Texto deletado</h2>
+    <!--aqueles famosos textos com um traço/risco cortando eles horizontalmente ao meio-->
+    <p>Podemos marcar <del>um texto como excluído</del> para indicar como ele deve ser lido, mas não considerado.</p>
+
+    <h2>Texto inserido</h2>
+    <!--ins tag semantica enquanto q o U n, portanto evitar o U até mesmo pq ele talvez vá cair em desuso?-->
+    <p>Podemos marcar <ins>um texto como inserido</ins> para dar uma ênfase e indicar que ele foi adicionado depois.</p>
+    <p>Existe também o sublinhado com a tag U (não semântica)</p>
+
+    <h2>Texto sobrescrito</h2>
+    <!--auto explicativo e extremamente util-->
+    <p>Para inserir coisas do tipo x<sup>20</sup>+3</p>
+
+    <h2>Texto subscrito</h2>
+    <!--auto explicativo e extremamente util-->
+    <p>Para inserir coisas do tipo H<sub>2</sub>O</p>
+</body>
+</html>
