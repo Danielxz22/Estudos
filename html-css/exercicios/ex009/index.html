@@ -8,7 +8,9 @@
 <body>
     <h1>Trabalhando com Listas</h1>
     <h2>Listas Ordenadas</h2>
-    <ol type="i"> <!--1 A a I i -->
+    <ol type="i"> <!-- dá pra escolher a forma q a contagem da lista será feita 1 = numerais / A = ordem alfabetica MAIUSCULA / a = ordem alfabetica minuscula / I = numeros romanos MAIUSCULOS / i = numeros romanos minusculos
+        tbm dá pra usar o parametro start="4" pra escolher a partir de qual numero a listagem começará-->
+        <!-- a partir do HTML5 fechar o </li> se tornou opcional entao pode usar ou n usar ele -->
         <li>Acordar
         <li>Ligar para o João
         <li>Tomar café
@@ -20,8 +22,9 @@
         <li>Jantar
         <li>Dormir
     </ol>
-    <h2>Listas não Ordenadas</h2>
-    <ul type="square"> <!--disc circle square -->
+    <h2>Listas não Ordenadas</h2> <!-- aonde a sequencia n faz sentido, n é preciso enumera-las-->
+    <!--OL = Ordered List / UL = Unordered List-->
+    <ul type="square"> <!--disc = disco(q na vdd é uma bolinha preenchida de preta) / circle = circulo(q na vdd é a mesma bolinha porém só o circulo externo enquanto internamente é vazio/branco) / square = quadrado (um quadradinho preto), só existe essas 3 opçoes e o disc é o padrao -->
         <li>Pão</li>
         <li>Leite</li>
         <li>Tomate</li>
@@ -30,8 +33,9 @@
         <li>Arroz</li>
         <li>Feijão</li>
     </ul>
+
     <h2>Minhas Linguagens Favoritas</h2>
-    <ol>
+    <ol> <!-- Aninhamento de listas-->
         <li>Antigas</li>
         <ol type="a">
             <li>Clipper</li>
@@ -41,19 +45,21 @@
         </ol>
 
         <li>Novas</li>
-        <ol type="a" start="5">
+        <ol type="a" start="5"> <!-- pra fazer a lista continuar listando crescentemente (a b c d >>e<<) nos utilizamos o parametro start="5" e devido ao fato do start ser um parametro NUMERICO (e n alfanumerico feito a lista exibida) nos devemos passar o numeral correspondente ao elemento/quantidade de elementos, q no caso é 5/quinto-->
+            <!--pela explicaçao do professor parece q existe uma forma de padrao velado aonde n se utiliza mto esse start pra dar continuidade na lista apenas deixando ela se resetar naturalmente, ele só botou o start="5" de curiosidade pra mostrar/ensinar os alunos-->
             <li>PHP</li>
             <li>Python</li>
             <li>Javascript</li>
             <li>Kotlin</li>
         </ol>        
     </ol>
-    <h2>Meus jogos favoritos</h2>
+
+    <h2>Meus jogos favoritos</h2> <!-- ***menus sao criados baseados nesse principio aki ai de colocar uma lista dentro da outra***-->
     <ol>
         <li>Nes</li>
-        <ul type="square">
+        <ul type="square"> <!-- parece q ULs internos usam por padrao o circle-->
             <li>Mario Bros</li>
-            <ul type="circle">
+            <ul type="circle"> <!-- e ULs subsequentes usam o type="" escolhido anteriormente como padrao-->
                 <li>Mario Bros 3</li>
                 <li>Mario: Lost Levels</li>
             </ul>
@@ -72,7 +78,8 @@
     </ol>
 
     <h2>Lista de Definições</h2>
-    <dl>
+    <dl> <!-- DL = Definition List, basicamente um dicionario aonde vc vai ter o termo <dt> e a definiçao dele <dd>
+        o uso dessa tag ajuda mto nos mecanismos de buscas, o google na hora de buscar por definiçoes ele dá valor por sites q tem Listas de Definiçoes dentro do seu codigo-->
         <dt>HTML</dt>
         <dd>Linguagem de marcação para a criação de conteúdo de um site.</dd>
         <dt>CSS</dt>
