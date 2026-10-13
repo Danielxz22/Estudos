@@ -3,43 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outras Formatações</title>
+    <title>Listas</title>
 </head>
 <body>
-    <h1>Outras Formatações</h1>
-    <h2>Código-fonte</h2>
-    <!--maior problema desse trecho de codigo na hora de exibir no site/tela é q as letras ficam pequenininhas pq essa fonte n é monoespaçada, ela n reserva o mesmo espaço lateral para cada letra, a fonte "code" é otima para ler codigos tanto q ela se chama "code"-->
-    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p>
-
-    <!--quando colocamos o code dentro de uma tag <pre>, ele vai considerar TUDO q esta aki dentro, inclusive os espaços "em brancos" do lado esquerdo dessas linhas de codigo aki embaixo, oq vai resultar no site/tela o trecho de codigo abaixo identico a como tá escrito aki no vscode, com as quebras de linhas e tabulaçoes, exatamente nessa formataçao.
-    Dá para selecionar o trecho de codigo todo e dar SHIFT + TAB pra puxar todo o texto uma unidade de medida de TABs pra esquerda.-->
-    <pre>        
-        <code>  <!--se deixasse apenas este trecho do code, na hora de exibir no site/tela, ele exibiria tudo um do lado do outro como se estivesse "grudado" pois o code n organiza o codigo com identaçao-->            
-    num = int(input('Digite um numero'))
-    if num % 2 == 0:
-        print(f'O número {num} é PAR')
-    else:
-        print(f'O número {num} é IMPAR')
-    print(f'Fim do programa')
-        </code>
-    </pre>
-
-    <h2>Citações simples</h2>
-    <!--Guanabara comentou q quando for botar uma citaçao de algo q alguma pessoa falou, ENVELOPE com o <q> pra fazer a citaçao ao inves de só botar duas "", reservar o uso das duas "" pra quando for algo diferente de uma citaçao de algo q alguem falou.-->
-    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rapido</q></p>
-    <h2>Citações completas</h2>
-    <p>Segundo Jeff Noble, no seu livro HTML para leigos:</p>
-    <blockquote cite="https://books.google.com.br/books?id=E8ZtDwAAQBAJ&pg=PA17&dq=HTML&hl=pt-BR&sa=X&ved=0ahUKEwjH5-PevNboAhVNIbkGHcoxCOgQ6AEIOjAC#v=onepage&q=HTML&f=false">
-        A diferença entre elementos inline e um bloco de texto é importante. Os elementos HTML neste capítulo descrevem os blocos de texto.
-    </blockquote>
-
-    <h2>Abreviações</h2>
-    <!--fica com um pontilhadinho embaixo da palavra e abre um balaozinho de visualizaçao com a mensagem q vc passou, no caso aki explicando oq as siglas significam, abbr provavelmente vem de abbreviation-->
-    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p>
-
-    <h2>Texto invertido</h2>
-    <!--<bdo> inverte a direçao do texto, left to right ou right to left, guanabara falou q é meio inutil e q ele nunca usou kkkkk
-        acho q daria pra usar isso pra trollar o usuario de alguma forma tipo: "n clique no botao/imagem", a mula clica e vc vai faz a gracinha acontecer-->
-    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <ol type="i"> <!--1 A a I i -->
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Almoçar</li>
+        <li>Ir para o trabalho</li>
+        <li>Voltar para casa</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+    </ol>
+    <h2>Listas não Ordenadas</h2>
+    <ul type="square"> <!--disc circle square -->
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Alface</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+    
 </body>
 </html>
