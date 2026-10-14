@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Links</title>
+</head>
+<!--maior buscador do mundo é o GOOGLE e o segundo maior buscador do mundo é o YOUTUBE(supostos dados de 2020 n sei hoje em dia), professor recomendou SE vc tiver uma marca, ter/criar seu site e tbm ter/criar um canal no youtube-->
+<body>
+    <h1>Usando links Externos</h1> <!-- links externos sao links q sempre vao apontar pra outro site q n é nosso-->
+    <!-- sempre q for um link externo recomendasse o uso do target="_blank" para q o link seja aberto em uma nova aba deixando a sua intacta, o rel="external" é basicamente uma forma de dizer q o link é relativo a algo q te leva pra fora(external) do site-->
+    <p>Você pode acessar o meu <a href="https://github.com/Danielxz22" target="_blank" rel="external">repositório público no GitHub</a></p>
+    <p>Você também pode acessar o meu <a href="https://www.youtube.com/@Danielxz22" target="_blank" rel="external">canal gratuito no Youtube</a></p>
+
+    <h1>Usando link Internos</h2>
+    <!-- quando eu faço um link interno eu n preciso botar o "url" inteiro contanto q a pagina esteja na MESMA PASTA deste arquivo index aqui
+     esses rel="next" e rel="prev" indicam a forma de navegaçao pelo seu site e, sao importantes tbm para ajudar o mecanismo de busca a encontrar qual o sistema de navegaçao vc tá criando pro seu site, até pq vc n vai dxar o mecanismo de busca do google decidir qual a proxima pagina-->
+    <p>Está é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" tagert="_self" rel="next">segunda página</a></p>
+    <!-- se a pagina estiver dentro de alguma pasta, vc terá de informar o caminho inteiro para q ele consiga localizar e exibir a pagina, vc tbm pode usar o target="_self" para indicar q a pagina será aberta na propria aba, usando ou n usando funciona da mesma maneira mas talvez isso influencie positivamente naquelas questoes de SEO? (Search Engine Optimization)-->
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" target="_self" rel="next">página de notícias</a></p>
+
+    <h1>Links para Download</h1>
+    <ul> <!-- professor ensinou q quando vc tiver codando e no href="" quando vc ainda n tiver link pra colocar dentro, só botar um # pois isso significa q tá um link vazio
+        hmm pelo q nos comentarios tanto o atributo download quanto o type n sao mais necessarios serem colocados, arquivos PDF ele n irá baixar sozinho, o usuario terá q manualmente fazer o download, arquivos .ZIP ou .RAR por padrao irao automaticamente iniciar o download-->
+        <li><a href="livro/10 - Ligações em toda parte.pdf" target="_blank" download="10 - Ligações em toda parte.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <!-- no caso do arquivo .RAR parece q só botando o href dele já funciona e faz o download normal, sem precisar de mais parametros adicionais-->
+        <li><a href="livro/10 - Ligações em toda parte.rar" download="10 - Ligações em toda parte.rar" type="application/rar">Livro compactado em RAR</a></li>
+        <li><a href="#">Exemplo de Link Vazio com # dentro do href</a></li>
+    </ul>
+
+    <!-- dica de comando interessante q eu peguei nos comentarios da aula no youtube, usar o comando ul>li*4>a dessa forma faz o vscode automaticamente criar uma UL dps criar 4 LI com 4 A HREF dentro de cada um deles, tudo pronto pra codar igual o exemplo abaixo
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+    -->
+    
+</body>
+</html>
