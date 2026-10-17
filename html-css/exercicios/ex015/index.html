@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos Externos</title>
+
+    <!--****e o terceiro estilo q tem mais poder ou maior preferencial é o Externo, como no exemplo do href abaixo****-->
+    <link rel="stylesheet" href="style.css">
+    <!--é possivel inclusive utilizar mais de um style.css diferente ao mesmo tempo tbm, tipo um
+    <link rel="stylesheet" href="extra.css">
+
+    ****professor comentou pra evitar ao maximo utilizar o estilo Inline, só use ele se for fazer alguma modificaçao bem pontual, q só vai funcionar naquele arquivo, naquela pagina e ainda assim deia preferencia pra utilizar um estilo Interno****
+
+    ****o segundo estilo q tem mais poder ou maior preferencial é o Interno, como no exemplo do style abaixo****--> 
+    <style>
+        h1 {
+            text-decoration: underline;
+        }
+    </style>   
+</head>
+
+<body>
+    <h1>Capítulo 1</h1>
+    <h2>Capítulo 1.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellat non beatae at quisquam harum magnam, iste, ipsa dolor ratione eaque esse, soluta blanditiis totam! Itaque voluptas natus quos eveniet.</p>
+
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias velit ex expedita recusandae fugit numquam, dolor quaerat tempora, iste odit harum nihil tempore, autem voluptatibus unde dolore culpa aliquam dolores.</p>
+
+    
+    <h1>Capítulo 2</h1>
+    <h2>Capítulo 2.1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius quisquam, voluptatum neque recusandae quia aperiam modi officiis itaque natus aspernatur doloremque molestiae porro dicta labore assumenda sequi cupiditate, veniam ab?</p>    
+
+    <!--****o estilo q tem mais poder ou maior preferencial é o Inline, como no exemplo do style abaixo****-->
+    <p style="text-align: right;"><a href="pagina02.html">Ir para a página 2</a></p>
+</body>
+</html>

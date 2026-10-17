@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Flexível</title>
+</head>
+<body>
+    <h1>Imagem Flexível</h1>
+    <p>Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar a melhor experiência 🤯</p>
+
+    <picture>
+        <!-- Janela com 1200px ou mais: imagem grande, adiciono +50 só pra na hora de redimensionar a tela, a imagem n chegar a tocar no limite/bordinha/barra de rolagem da janela, fica tipo uns 50pixels "colchao/amortecimento" -->
+        <source media="(min-width: 1250px)" srcset="imagens/paisagem-g.png" type="image/png">
+
+        <!-- Janela com 740px ou mais (e menos de 1200px): imagem média -->
+        <source media="(min-width: 790px)" srcset="imagens/paisagem-m.png" type="image/png">
+
+        <!-- Nenhuma condição acima deu certo (janela menor que 740px): imagem pequena -->
+        <img src="imagens/paisagem-p.png" alt="Imagem Flexível">
+    </picture>
+
+<!--A regra para lembrar:
+
+Com max-width, a ordem vai do menor para o maior.
+Com min-width, a ordem vai do maior para o menor.
+
+Usando as larguras dos seus arquivos como breakpoints, a lógica é mostrar cada imagem quando a janela tem pelo menos a largura dela:
+
+Nesse formato, o <img> no final (o fallback) é a imagem pequena. Como a janela do Chrome não passa de um mínimo de uns 500px, ao arrastar a borda você vai ver a pequena abaixo de 740px, a média entre 740px e 1199px, e a grande de 1200px para cima.
+
+-->
+    
+</body>
+</html>

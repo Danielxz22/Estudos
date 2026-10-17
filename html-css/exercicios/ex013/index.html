@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos Inline</title>
+</head>
+
+<!-- style="" é o CSS "inline": o estilo é escrito direto na tag, no formato propriedade: valor;
+     Cada propriedade termina com ponto e vírgula e afeta só aquela tag -->
+
+<!-- No body, o estilo vale para a página toda e é herdado pelas tags de dentro:
+     background-color = cor de fundo da página
+     font-family = fonte do texto (se a primeira não existir, usa a próxima da lista, e assim por diante)
+     font-size = tamanho base do texto (20px) -->
+<body style="background-color: lightskyblue; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
+
+    <!-- color = cor do texto
+         background-color = cor de fundo só deste título
+         font-size: 1.5em = 1,5 vez o tamanho base (20px x 1.5 = 30px).
+         O "em" é relativo ao tamanho do elemento pai, e não um valor fixo em pixels -->
+    <h1 style="color: mediumblue; background-color: dodgerblue; font-size: 1.5em;">Capítulo 1</h1>
+
+    <!-- Mesma ideia: texto vermelho escuro, com tamanho 1,2 vez o base (24px) -->
+    <h2 style="color: darkred; font-size: 1.2em;">Capítulo 1.1</h2>
+
+    <!-- text-align: justify = alinha o texto nas duas margens, como em livros e jornais -->
+    <p style="text-align: justify;">Lorem, ipsum dolor sit amet...</p>
+
+    <h2 style="color: darkred; font-size: 1.2em;">Capítulo 1.2</h2>
+    <p style="text-align: justify;">Lorem ipsum dolor sit amet...</p>
+
+    <!-- Aqui o mesmo estilo do primeiro <h1> foi repetido na mão (só em outra ordem) -->
+    <h1 style="color: mediumblue; font-size: 1.5em; background-color: dodgerblue;">Capítulo 2</h1>
+    <h2 style="color: darkred; font-size: 1.2em;">Capítulo 2.1</h2>
+    <p style="text-align: justify;">Lorem ipsum dolor, sit amet...</p>    
+</body>
+</html>

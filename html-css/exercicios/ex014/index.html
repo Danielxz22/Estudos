@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos Inline</title>
+    <!-- <style> é o CSS "interno": o estilo fica em um bloco só dentro do <head>,
+     em vez de espalhado em cada tag. Dentro dele, os comentários usam /* */ -->
+    <style>
+
+        /* Estrutura do CSS: seletor { propriedade: valor; }
+        O seletor diz QUEM recebe o estilo. Aqui são nomes de tags,
+        então o estilo vale para todas as tags daquele tipo da página */
+
+        /* Todo o conteúdo da página: fundo, fonte e tamanho base do texto.
+        As tags de dentro herdam a fonte e o tamanho */
+        body {
+            background-color: lightsteelblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        /* TODOS os <h1> ficam com texto azul escuro e fundo azul claro */
+        h1 {
+            color: darkblue;
+            background-color: lightblue;
+        }
+
+        /* TODOS os <h2> ficam com texto vermelho escuro */
+        h2 {
+            color: darkred;
+        }
+
+        /* TODOS os <p> ficam com o texto justificado */
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Capítulo 1</h1>
+    <h2>Capítulo 1.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellat non beatae at quisquam harum magnam, iste, ipsa dolor ratione eaque esse, soluta blanditiis totam! Itaque voluptas natus quos eveniet.</p>
+
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias velit ex expedita recusandae fugit numquam, dolor quaerat tempora, iste odit harum nihil tempore, autem voluptatibus unde dolore culpa aliquam dolores.</p>
+
+    
+    <h1>Capítulo 2</h1>
+    <h2>Capítulo 2.1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius quisquam, voluptatum neque recusandae quia aperiam modi officiis itaque natus aspernatur doloremque molestiae porro dicta labore assumenda sequi cupiditate, veniam ab?</p>    
+</body>
+</html>

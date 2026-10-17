@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos em HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+    <!--<video src="midia/meu-video-handbrake.mp4" width="500" controls></video> -->
+
+    <!-- <video> cria um player de vídeo na página, e funciona de forma parecida com o <audio>.
+     width = largura do player em pixels (a altura se ajusta sozinha, mantendo a proporção)
+     poster = imagem mostrada antes de o vídeo começar (a "capa")
+     controls = mostra os botões do player (play, pausa, volume, tela cheia...) -->
+    <video width="750" poster="imagens/limoes-capa.png" controls autoplay muted loop>
+
+        <!-- O navegador lê os <source> de cima para baixo e usa o primeiro formato que ele suporta.
+         src = caminho do arquivo | type = tipo MIME (o formato) do arquivo -->
+        <source src="midia/meu-video-handbrake.mp4" type="video/mp4">
+
+        <!-- Atenção: "video/m4v" não é um tipo MIME oficial. O comum é "video/x-m4v"
+         (ou usar "video/mp4", já que o M4V é uma variação do MP4) -->
+        <source src="midia/meu-video.m4v" type="video/m4v">
+
+        <source src="midia/meu-video.webm" type="video/webm">
+
+        <!-- A extensão é .ogv, mas o tipo MIME é video/ogg -->
+        <source src="midia/meu-video.ogv" type="video/ogg">
+
+        <!-- Fallback: só aparece em navegadores muito antigos que não conhecem a tag <video> -->
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos. 
+            <a href="midia/meu-video-handbrake.mp4">Clique para fazer o download do vídeo.</a></p>
+    </video>
+
+    <!--Atributos do <video>
+    Atributo	    O que faz
+    controls	    Mostra o player. Sem ele, o vídeo aparece sem botões.
+    width / height	Define o tamanho do player. Usar só um dos dois mantém a proporção.
+    poster	        Imagem de capa exibida antes do play. Sem ele, o navegador mostra o primeiro quadro do vídeo (ou nada).
+    autoplay	    Tenta tocar ao carregar a página.
+    loop	        Repete o vídeo quando termina.
+    muted	        Começa sem som.
+    preload	        Quanto carregar antes do play: none, metadata ou auto.
+    playsinline	    No iPhone, faz o vídeo tocar na própria página em vez de abrir em tela cheia.
+    
+    Mesma regra do áudio: os navegadores bloqueiam autoplay com som. Para o autoplay funcionar, normalmente precisa de muted junto.
+    
+    Atributos do <source>
+    src: caminho do arquivo.
+    type: formato do arquivo. Deixa o navegador pular os que ele não suporta sem baixá-los.
+
+    Tipos de vídeo mais comuns:
+
+    Formato	    type	        Observação
+    MP4	        video/mp4	    O mais compatível, funciona em praticamente tudo.
+    WebM	    video/webm	    Aberto e leve, ótimo para web.
+    OGG / OGV	video/ogg	    Aberto, mas hoje pouco usado.
+    M4V	        video/x-m4v	    Variação do MP4, vinda do ecossistema Apple.
+    MOV	        video/quicktime	Formato da Apple, o suporte varia.
+
+    Hoje um <source> de MP4 (codificado em H.264) sozinho resolve quase todos os casos. Vários <source> entram no curso para mostrar como oferecer alternativas.
+    -->
+    <h1>Inserindo vídeos do YouTube</h1>
+    <iframe width="750" height="415" src="https://www.youtube.com/embed/QXz_XstuWVk?si=HWE9QDFXII0gXrvX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <h1>Inserindo vídeos do Vimeo</h1>
+    <iframe width="750" height="415" src="https://player.vimeo.com/video/51821954?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Animation Demo Reel"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</body>
+</html>

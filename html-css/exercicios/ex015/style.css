@@ -1,0 +1,29 @@
+@charset "UTF-8";
+    
+/* Estrutura do CSS: seletor { propriedade: valor; }
+O seletor diz QUEM recebe o estilo. Aqui são nomes de tags,
+então o estilo vale para todas as tags daquele tipo da página */
+
+/* Todo o conteúdo da página: fundo, fonte e tamanho base do texto.
+As tags de dentro herdam a fonte e o tamanho */
+body {
+    background-color: lightgoldenrodyellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* TODOS os <h1> ficam com texto azul escuro e fundo azul claro */
+h1 {
+    color: maroon;
+    background-color: goldenrod;
+}
+
+/* TODOS os <h2> ficam com texto vermelho escuro */
+h2 {
+    color: darkred;
+}
+
+/* TODOS os <p> ficam com o texto justificado */
+p {
+    text-align: justify;
+}

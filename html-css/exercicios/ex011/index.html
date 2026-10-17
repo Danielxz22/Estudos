@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho da janela do seu navegador.</p>
+
+    <!-- <picture> é um container que deixa o navegador escolher QUAL imagem mostrar,
+     de acordo com a largura da tela, o formato do arquivo, etc. -->
+    <picture>
+        <!-- Se a largura da tela for de até 750px (celulares), usa a imagem pequena.
+         media = a condição | srcset = o arquivo a carregar | type = formato do arquivo -->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+
+        <!-- Se não caiu na regra acima e a tela tem até 1050px (tablets), usa a média -->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+
+        <!-- Se nenhuma condição acima for verdadeira (telas grandes), usa esta imagem.
+         O <img> é obrigatório: serve de padrão (fallback), é ele quem de fato exibe
+         a imagem, e o alt fica aqui também -->
+        <img src="imagens/foto-g.png" alt="Imagem Flexível">
+    </picture>
+    
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <!--autoplay faria o arquivo tocar automaticamente porém o google proibiu isso de funcionar no navegador, em outros navegadores deve funcionar ainda-->
+    <!-- <audio src="midia/happy-mistake.mp3" controls autoplay></audio> o comando é compativel com MP3 OGG e WAV -->
+
+    <!-- <audio> cria um player de áudio na página. Os atributos abaixo configuram o comportamento -->
+    <audio preload="auto" autoplay controls loop>
+        <!-- <source> oferece uma versão do arquivo. O navegador lê de cima para baixo
+         e usa a primeira que ele souber reproduzir.
+         src = caminho do arquivo | type = tipo MIME (o formato) do arquivo -->
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">    
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav"> <!--evitar arquivos .wav na visualizaçao do site pois sao mto pesados, utilizar mais se for pra opçao de download.-->
+
+        <!-- Tudo que fica dentro do <audio>, fora dos <source>, é o fallback:
+         só aparece em navegadores muito antigos que não suportam a tag <audio> -->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio.
+        <a href="midia/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3.</a></p>
+    </audio>
+
+    <!--Atributos do <audio>
+        Atributo	O que faz
+        controls	Mostra o player (play, pausa, volume, barra de progresso). Sem ele, o áudio fica invisível.
+        autoplay	Tenta tocar assim que a página carrega.
+        loop	    Repete o áudio quando termina.
+        muted	    Começa sem som.
+        preload	    Diz ao navegador o quanto carregar antes de o usuário dar play. 
+            
+    Valores do preload:
+        none: não carrega nada até o play (economiza dados).
+        metadata: carrega só informações como a duração.
+        auto: carrega o arquivo inteiro de antemão (é o que você usou).
+
+    Sobre o autoplay: a maioria dos navegadores modernos bloqueia o autoplay de áudio com som, a menos que o usuário já tenha interagido com a página. Então no seu teste ele provavelmente não vai tocar sozinho. Combinado com muted, o autoplay costuma funcionar.
+
+    Atributos do <source>
+        src: o caminho do arquivo.
+        type: o formato. Ajuda o navegador a pular arquivos que ele não suporta sem precisar baixá-los.
+        
+    Formato 	  type    	                Observação
+        MP3	      audio/mpeg	            O mais compatível.
+        OGG 	  audio/ogg	                Bom e aberto, mas o Safari antigo não suportava.
+        WAV	      audio/wav	                Sem compressão, qualidade alta e arquivo pesado.
+        AAC / M4A audio/aac ou audio/mp4	Comum em dispositivos Apple.
+        WebM	  audio/webm            	Moderno, bom para web.
+        FLAC      audio/flac	            Sem perda de qualidade, arquivo grande.
+    -->
+</body>
+</html>
