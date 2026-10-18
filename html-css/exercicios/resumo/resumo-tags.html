@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE html> avisa ao navegador que a página usa HTML5 -->
+<html lang="pt-br"> <!-- <html> envolve a página toda | lang = idioma do conteúdo -->
+<head> <!-- <head> guarda informações da página que não aparecem na tela -->
+    <meta charset="UTF-8"> <!-- charset = codificação, permite acentos e "ç" sem bugar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ajusta a página para celulares -->
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon"> <!-- <link> liga a página a outro arquivo, aqui o ícone da aba -->
+    <title>Resumo das Tags</title> <!-- <title> é o nome que aparece na aba do navegador -->
+
+    <!-- <style> é o CSS interno: seletor { propriedade: valor; } vale para todas as tags daquele tipo -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        p {
+            text-align: justify;
+        }
+    </style>
+
+    <!-- Para usar um arquivo CSS separado, o <link> também serve: -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body> <!-- <body> é tudo o que aparece na tela -->
+
+    <!-- ========== TÍTULOS E PARÁGRAFOS ========== -->
+    <h1>Resumo das Tags</h1> <!-- <h1> a <h6>: títulos, do mais importante (h1) ao menos importante (h6) -->
+    <h2>Títulos e parágrafos</h2>
+    <h3>Um título de nível 3</h3>
+    <p>O &lt;p&gt; cria um parágrafo e já vem com margem em cima e embaixo.</p> <!-- &lt; e &gt; mostram os símbolos < e > como texto, sem o navegador achar que é uma tag -->
+    <p>
+        Para quebrar a linha dentro do mesmo parágrafo usamos o &lt;br&gt; (sem fechamento):<br>
+        esta linha está logo abaixo da anterior, sem margem entre elas.
+    </p>
+    <hr> <!-- <hr> desenha uma linha horizontal para separar assuntos -->
+
+    <!-- ========== FORMATAÇÃO DE TEXTO ========== -->
+    <h2>Formatação de texto</h2>
+    <p>Texto com <strong>importância (strong)</strong> e com <em>ênfase (em)</em>: têm significado.</p> <!-- strong = negrito, em = itálico, ambos semânticos -->
+    <p>Texto em <b>negrito</b> e em <i>itálico</i>: só mudam o visual, não têm significado.</p> <!-- b e i = não semânticos -->
+    <p>Um texto <mark>marcado como destaque</mark> com a tag mark.</p> <!-- mark = marca-texto -->
+    <p>Um texto <small>pequeno</small>, outro <del>excluído</del> e outro <ins>inserido</ins>.</p> <!-- small = menor | del = riscado | ins = sublinhado -->
+    <p>Fórmulas: x<sup>2</sup> (sobrescrito) e H<sub>2</sub>O (subscrito).</p> <!-- sup = acima da linha | sub = abaixo da linha -->
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr>.</p> <!-- abbr = abreviação, o title mostra o significado ao passar o mouse -->
+    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido</q></p> <!-- q = citação curta, dentro do texto -->
+    <blockquote cite="https://exemplo.com.br/livro"> <!-- blockquote = citação longa em bloco | cite = fonte -->
+        Uma citação mais longa fica separada do resto do texto.
+    </blockquote>
+    <p><bdo dir="rtl">Estou aprendendo HTML.</bdo></p> <!-- bdo = inverte a direção do texto (dir="rtl" = direita para esquerda) -->
+    <address>Rua dos Capixabas, 229 - Botafogo - RJ</address> <!-- address = informações de contato/endereço -->
+    <p><u>Texto sublinhado</u> com a tag u.</p>
+
+    <!-- ========== CÓDIGO ========== -->
+    <h2>Código-fonte</h2>
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em JavaScript.</p> <!-- code = trecho de código dentro do texto -->
+    <pre>
+        <code>
+function ola() {
+    console.log('Olá!');
+}
+        </code>
+    </pre> <!-- pre mantém espaços e quebras de linha exatamente como foram digitados, ideal para blocos de código -->
+
+    <!-- ========== LISTAS ========== -->
+    <h2>Listas</h2>
+
+    <ul> <!-- ul = lista com marcadores | li = cada item da lista -->
+        <li>Item com marcador</li>
+        <li>Outro item</li>
+    </ul>
+
+    <ul type="square"> <!-- type muda o marcador: disc, circle ou square -->
+        <li>Marcador quadrado</li>
+    </ul>
+
+    <ol> <!-- ol = lista numerada -->
+        <li>Primeiro</li>
+        <li>Segundo</li>
+        <li>
+            Terceiro, com lista aninhada (uma lista dentro de um li):
+            <ol type="a"> <!-- type: 1, A, a, I ou i | start="5" começa a contar do 5º item -->
+                <li>Item a</li>
+                <li>Item b</li>
+            </ol>
+        </li>
+    </ol>
+
+    <dl> <!-- dl = lista de definições, como um dicionário -->
+        <dt>HTML</dt> <!-- dt = o termo -->
+        <dd>Linguagem de marcação para o conteúdo de um site.</dd> <!-- dd = a definição -->
+        <dt>CSS</dt>
+        <dd>Linguagem para o design de um site.</dd>
+    </dl>
+
+    <!-- ========== IMAGENS ========== -->
+    <h2>Imagens</h2>
+    <img src="imagens/github-p.png" alt="Mascote do GitHub com óculos"> <!-- img = imagem | src = caminho do arquivo | alt = descrição para leitores de tela e quando a imagem não carrega -->
+
+    <!-- picture = escolhe a imagem de acordo com a largura da janela, o navegador lê os source de cima para baixo e usa o primeiro que der certo -->
+    <picture>
+        <source media="(min-width: 1200px)" srcset="imagens/paisagem-g.png" type="image/png"> <!-- janela grande -->
+        <source media="(min-width: 740px)" srcset="imagens/paisagem-m.png" type="image/png"> <!-- janela média -->
+        <img src="imagens/paisagem-p.png" alt="Imagem Flexível"> <!-- padrão (janela pequena), o img é obrigatório -->
+    </picture>
+
+    <!-- ========== LINKS ========== -->
+    <h2>Links</h2>
+    <p><a href="pagina02.html" target="_self" rel="next">Ir para a próxima página</a></p> <!-- a = link | href = destino | target="_self" = mesma aba | rel="next" = próxima página da sequência -->
+    <p><a href="index.html" rel="prev">Voltar para a página anterior</a></p> <!-- rel="prev" = página anterior -->
+    <p><a href="https://github.com/Danielxz22" target="_blank" rel="external">Meu GitHub</a></p> <!-- target="_blank" = nova aba | rel="external" = site externo -->
+    <p><a href="#">Link vazio</a></p> <!-- href="#" = link que não leva a lugar nenhum (útil em testes) -->
+    <p><a href="livro/capitulo.pdf" download="capitulo.pdf">Baixar o PDF</a></p> <!-- download = baixa o arquivo em vez de abrir -->
+    <p><a href="https://www.hostnet.com.br" target="_blank" rel="nofollow">Patrocinador</a></p> <!-- rel="nofollow" = pede ao buscador para não seguir o link -->
+
+    <!-- ========== ÁUDIO E VÍDEO ========== -->
+    <h2>Áudio e vídeo</h2>
+
+    <audio controls preload="auto"> <!-- audio = player de áudio | controls = mostra os botões | preload = quanto carregar antes do play | autoplay e loop também existem -->
+        <source src="midia/musica.mp3" type="audio/mpeg"> <!-- source = uma versão do arquivo, o navegador usa a primeira que souber tocar -->
+        <source src="midia/musica.ogg" type="audio/ogg">
+        <p>Seu navegador não toca áudio. <a href="midia/musica.mp3">Baixe o MP3.</a></p> <!-- texto de reserva para navegadores antigos -->
+    </audio>
+
+    <video width="750" poster="imagens/capa.png" controls> <!-- video = player de vídeo | width = largura | poster = capa antes do play -->
+        <source src="midia/video.mp4" type="video/mp4">
+        <source src="midia/video.webm" type="video/webm">
+        <p>Seu navegador não toca vídeos. <a href="midia/video.mp4">Baixe o vídeo.</a></p>
+    </video>
+
+    <!-- iframe = coloca uma página/player de outro site dentro da sua, como um vídeo do YouTube.
+         Use o código de "Incorporar" do site. Aberto por file:/// o YouTube dá erro 153, use o Live Server -->
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/iT6E92Kt38o"
+        title="Player de vídeo do YouTube"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+
+    <!-- ========== ESTILO INLINE ========== -->
+    <h2>Estilo inline</h2>
+    <p style="color: darkred; text-align: right;">style="" aplica CSS só nesta tag. Funciona, mas o ideal é usar o bloco style ou um arquivo .css.</p>
+
+    <!-- ========== TAGS DO HTML4 (OBSOLETAS) ========== -->
+    <!-- Aparecem nos exercícios só para mostrar o que NÃO usar. Hoje o CSS faz o trabalho delas:
+         <center> (centralizar) | <font color=""> (cor da fonte) | <big> (texto grande) | <marquee> (texto andando) -->
+
+</body>
+</html>
